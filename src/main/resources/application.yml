@@ -1,0 +1,27 @@
+
+#Default dev profile
+
+spring:
+  datasource:
+    url: jdbc:postgresql://172.16.0.7:5432/postgres
+    username: postgres
+    password: postgres
+    hikari:
+      auto-commit: false
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  liquibase:
+    change-log: classpath:db/changelog-master.xml
+    enabled: true
+
+#mybatis:
+#  mapper-locations: classpath:repository/*.xml
+
+server:
+  max-http-request-header-size: 100KB
+  port: 8080
+  address: 0.0.0.0
+  servlet:
+    context-path: /api/
+
