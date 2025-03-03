@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
 
-    @Query(value = "SELECT * FROM listar_usuarios_por_status_e_nome(:p_status, :p_nome)", nativeQuery = true)
+    @Query(value = "SELECT * FROM usuario.listar_usuarios_por_status_e_nome(:p_status, :p_nome)", nativeQuery = true)
     List<User> listarUsuariosPorStatusEParteDoNome(
             @Param("p_status") String status,
             @Param("p_nome") String nome

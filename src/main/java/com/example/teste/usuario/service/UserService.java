@@ -18,5 +18,7 @@ public class UserService {
         return this.userRepository.listarUsuariosPorStatusEParteDoNome(userListDTO.getAtivo(), userListDTO.getNome());
     }
 
-
+    public List<User> findAll() {
+        return this.userRepository.findAll();
+    }
 }

@@ -26,7 +26,7 @@ public class User {
     @Column(name = "usr_ativo")
     private String ativo;
 
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern="dd/MM/yyyy HH:mm:ss")
     @Column(name = "usr_dt_created_at")
     private LocalDateTime dataCriacao;
 }

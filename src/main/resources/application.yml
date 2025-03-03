@@ -1,4 +1,3 @@
-
 #Default dev profile
 
 spring:
@@ -14,9 +13,9 @@ spring:
   liquibase:
     change-log: classpath:db/changelog-master.xml
     enabled: true
-
-#mybatis:
-#  mapper-locations: classpath:repository/*.xml
+  output:
+    ansi:
+      enabled: ALWAYS
 
 server:
   max-http-request-header-size: 100KB
